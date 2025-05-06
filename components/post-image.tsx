@@ -25,20 +25,15 @@ export function PostImage({ src, alt = "Blog image" }: PostImageProps) {
 
   const handleError = () => {
     console.error(`Failed to load image: ${imageSrc}`)
-    setError(true)
-
+    
     // Try alternative path as fallback
     if (!imageSrc.startsWith("/public/")) {
       setImageSrc(`/public${imageSrc}`)
+    } else {
+      // If all fallbacks fail, use the placeholder image
+      setImageSrc("/placeholder.png")
+      setError(true)
     }
-  }
-
-  if (error) {
-    return (
-      <div className="border border-red-200 bg-red-50 p-4 rounded my-4 text-center">
-        <p className="text-red-500">Image could not be loaded: {alt || src}</p>
-      </div>
-    )
   }
 
   return (

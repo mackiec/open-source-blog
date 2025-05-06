@@ -74,6 +74,10 @@ export function ZoomableImage({ src, alt = "", className = "" }: ZoomableImagePr
           alt={alt}
           className="max-w-full h-auto rounded cursor-pointer transition-all hover:brightness-95"
           onClick={() => setIsOpen(true)}
+          onError={(e) => {
+            // If image fails to load, replace with placeholder
+            e.currentTarget.src = '/placeholder.png';
+          }}
         />
         <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
           <div className="bg-white p-1 rounded-full shadow-sm">
@@ -99,6 +103,10 @@ export function ZoomableImage({ src, alt = "", className = "" }: ZoomableImagePr
               style={{
                 transform: `scale(${scale})`,
                 transition: 'transform 0.1s ease-out'
+              }}
+              onError={(e) => {
+                // If image fails to load, replace with placeholder
+                e.currentTarget.src = '/placeholder.png';
               }}
             />
             <button 

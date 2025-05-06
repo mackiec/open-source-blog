@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { getPosts } from "@/lib/posts"
 import { DatePill } from "@/components/date-pill"
+import { PostListImage } from "@/components/post-list-image"
 
 /**
  * Home Page Component
@@ -96,19 +97,7 @@ export default async function Home() {
                   
                   {/* Image column - full width on mobile */}
                   <div className="mt-3 md:mt-0 rounded-lg overflow-hidden shadow-sm mx-auto md:mx-0 max-w-[250px] md:max-w-none">
-                    {post.imageUrl ? (
-                      <div className="h-36 w-full relative">
-                        <img 
-                          src={post.imageUrl} 
-                          alt={post.title}
-                          className="object-cover h-full w-full"
-                        />
-                      </div>
-                    ) : (
-                      <div className="h-36 w-full flex items-center justify-center bg-gray-200 dark:bg-neutral-700/50">
-                        <span className="text-gray-400 dark:text-gray-400 text-sm">No preview</span>
-                      </div>
-                    )}
+                    <PostListImage src={post.imageUrl} alt={post.title} />
                   </div>
                   </Link>
                 </div>
