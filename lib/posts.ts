@@ -69,7 +69,8 @@ export async function getPosts(): Promise<Post[]> {
           const excerpt = data.excerpt || content.slice(0, 150).trim() + "..."
           
           // Extract the first image URL from the content for previews
-          const imageUrl = extractFirstImageUrl(content)
+          // Use placeholder image if no image is found in the content
+          const imageUrl = extractFirstImageUrl(content) || '/placeholder.png'
 
           // Return post object
           return {
@@ -137,7 +138,8 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     const { data, content } = matter(fileContents)
     
     // Extract the first image URL from the content
-    const imageUrl = extractFirstImageUrl(content)
+    // Use placeholder image if no image is found in the content
+    const imageUrl = extractFirstImageUrl(content) || '/placeholder.png'
 
     // Return post object
     return {

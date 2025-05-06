@@ -5,8 +5,6 @@ author: "Your Name"
 excerpt: "Learn how to customize this blog, create new posts, and make it your own."
 ---
 
-# Welcome to Your New Blog!
-
 This is a template post that demonstrates how to create content for your blog. This post will guide you through the basics of customizing your blog, creating new posts, and deploying your site.
 
 ## Writing Posts
@@ -74,7 +72,9 @@ This blog supports standard Markdown syntax as well as some additional features:
 ![Alt text](https://example.com/image.jpg)
 ```
 
-Images will be automatically optimized and support zooming when clicked.
+Images will be automatically optimized and support zooming when clicked, like this:
+
+![Placeholder Image](/placeholder.png)
 
 ### Code Blocks
 
@@ -116,7 +116,7 @@ The blog comes with built-in dark and light mode support. You can customize the 
 You can add your own images to the public directory and reference them in your posts:
 
 ```markdown
-![My Image](/my-image.jpg)
+![My Image](/my-image.png)
 ```
 
 ## Deployment

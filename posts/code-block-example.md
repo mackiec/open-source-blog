@@ -1,4 +1,9 @@
-# Code Block Language Badge Examples
+---
+title: Code Block Language Badge Examples"
+date: "2025-01-01"
+author: "Your Name"
+excerpt: "Exploring how to display code blocks in posts."
+---
 
 This file demonstrates how to use language badges with code blocks in your Markdown files.
 
