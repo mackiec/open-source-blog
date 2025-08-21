@@ -32,7 +32,6 @@ const inter = Poppins({ weight: ["400", "500", "700"], subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Open Source Blog",
   description: "A minimalist, content-focused blog built with Next.js and Tailwind CSS.",
-  generator: 'v0.dev',
   openGraph: {
     title: "Open Source Blog",
     description: "A minimalist, content-focused blog built with Next.js and Tailwind CSS.",
